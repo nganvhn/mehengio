@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Mẹ Hẹn Giờ</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#8E4A3F}a:hover{color:#7A3E34}
+button{font-family:inherit}
+button:focus-visible{outline:3px solid #4A3F3A;outline-offset:4px}
+.on-dark:focus-visible{outline-color:#FBF6F1;outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@keyframes softPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.pulse{animation:softPulse 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.pulse{animation:none}}
+@keyframes tDrop{0%{transform:translateY(0) scale(0.2);opacity:0}10%{opacity:1}35%{transform:translateY(0) scale(1)}51.25%{transform:translateY(6px) scale(1)}67.5%{transform:translateY(24px) scale(1)}83.75%{transform:translateY(54px) scale(1)}100%{transform:translateY(96px) scale(1);opacity:1}}
+@keyframes tRipple{0%{transform:scale(0.3);opacity:0.9}40%{transform:scale(1.7);opacity:0}100%{transform:scale(1.7);opacity:0}}
+@keyframes tSteam{0%{transform:translate(0,8px) scaleY(0.8);opacity:0}25%{opacity:0.85}100%{transform:translate(4px,-30px) scaleY(1.15);opacity:0}}
+@keyframes tBubble{0%{transform:scale(0);opacity:0}55%{transform:scale(1);opacity:1}68%{transform:scale(1.12);opacity:1}72%{transform:scale(1.45);opacity:0}100%{transform:scale(1.45);opacity:0}}
+@keyframes tFlame{0%,100%{transform:scale(1,1)}25%{transform:scale(0.94,1.08)}50%{transform:scale(1.04,0.9)}75%{transform:scale(0.97,1.04)}}
+@keyframes tSlide{0%{transform:translateY(0);opacity:0}15%{transform:translateY(2px);opacity:1}72%{transform:translateY(78px);opacity:1}78%{transform:translateY(80px);opacity:1}100%{transform:translateY(94px);opacity:0}}
+@keyframes tBob{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(2px) rotate(1.5deg)}}
+@keyframes tWave{0%,100%{transform:translateX(0)}50%{transform:translateX(-4px)}}
+@keyframes tGlow{0%,100%{opacity:0.72}50%{opacity:0.82}}
+@keyframes tGrain{0%,100%{transform:translate(0,0)}50%{transform:translate(3px,1px)}}
+@keyframes tSand{0%{stroke-dashoffset:0}100%{stroke-dashoffset:-14}}
+@media (prefers-reduced-motion: reduce){.t-anim{animation:none !important}}
+</style>
+</helmet>
+<div lang="{{langCode}}" style="width: 390px; height: 844px; box-sizing: border-box; background: #FBF6F1; color: #4A3F3A; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Be Vietnam Pro', system-ui, sans-serif; position: relative; overflow: hidden">
+
+<sc-if value="{{isHome}}" hint-placeholder-val="{{ true }}">
+<div style="height: 100%; box-sizing: border-box; padding: 52px 24px 32px; display: flex; flex-direction: column; gap: 18px; overflow-y: auto">
+<div style="display: flex; align-items: center; gap: 10px">
+<h1 style="flex: 1; margin: 0; font-size: 26px; font-weight: 600; line-height: 1.2">{{t.homeTitle}}</h1>
+<button onClick="{{openSettings}}" aria-label="{{t.settings}}" style="width: 56px; height: 56px; flex-shrink: 0; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+</button>
+<button onClick="{{openHistory}}" aria-label="{{t.historyBtn}}" style="width: 56px; height: 56px; flex-shrink: 0; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg>
+</button>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-if value="{{hasUndo}}" hint-placeholder-val="{{ false }}">
+<div role="status" style="display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 6px 6px 6px 20px; border-radius: 999px; background: #4A3F3A; color: #FBF6F1; box-sizing: border-box">
+<span style="flex: 1; font-size: 16px; font-weight: 500">{{undoText}}</span>
+<button class="on-dark" onClick="{{doUndo}}" style="height: 44px; padding: 0 18px; border-radius: 999px; border: none; background: #FBF6F1; color: #4A3F3A; font-size: 16px; font-weight: 600; cursor: pointer">{{t.undo}}</button>
+</div>
+</sc-if>
+<sc-if value="{{hasLastPump}}" hint-placeholder-val="{{ true }}">
+<button onClick="{{openHistory}}" style="display: flex; align-items: center; gap: 12px; min-height: 60px; padding: 6px 18px 6px 6px; border: none; border-radius: 999px; background: #F6DCD6; color: #4A3F3A; cursor: pointer; text-align: left">
+<span style="width: 48px; height: 48px; flex-shrink: 0; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<dc-import name="Icon3d" kind="pump" size="38" hint-size="38px,38px"></dc-import>
+</span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 1px">
+<span style="font-size: 16px; font-weight: 600">{{lastPumpText}}</span>
+<span style="font-size: 14px">{{nextText}}</span>
+</span>
+</button>
+</sc-if>
+<sc-if value="{{showChip}}" hint-placeholder-val="{{ false }}">
+<button onClick="{{openRun}}" style="display: flex; align-items: center; gap: 12px; height: 60px; padding: 0 18px 0 6px; border: none; border-radius: 999px; background: {{catBg}}; color: #4A3F3A; cursor: pointer; text-align: left">
+<span style="width: 48px; height: 48px; flex-shrink: 0; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<dc-import name="Icon3d" kind="{{catKey}}" size="38" hint-size="38px,38px"></dc-import>
+</span>
+<span style="flex: 1; font-size: 16px; font-weight: 600">{{runTitle}}</span>
+<span style="font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums">{{timeLeft}}</span>
+</button>
+</sc-if>
+<sc-if value="{{safeRunning}}" hint-placeholder-val="{{ false }}">
+<button onClick="{{openSafe}}" style="display: flex; align-items: center; gap: 12px; height: 60px; padding: 0 18px 0 6px; border: none; border-radius: 999px; background: {{safeChipBg}}; color: #4A3F3A; cursor: pointer; text-align: left">
+<span style="width: 48px; height: 48px; flex-shrink: 0; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<dc-import name="Icon3d" kind="milk" size="38" hint-size="38px,38px"></dc-import>
+</span>
+<span style="flex: 1; font-size: 16px; font-weight: 600">{{safeChipText}}</span>
+<span style="font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums">{{safeChipRight}}</span>
+</button>
+</sc-if>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 18px; column-gap: 16px; justify-items: center">
+<sc-for list="{{grid}}" as="g" hint-placeholder-count="6">
+<button onClick="{{g.pick}}" style="background: none; border: none; padding: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; color: #4A3F3A">
+<span style="width: 112px; height: 112px; border-radius: 50%; background: {{g.bg}}; display: flex; align-items: center; justify-content: center">
+<dc-import name="Icon3d" kind="{{g.kind}}" size="86" hint-size="86px,86px"></dc-import>
+</span>
+<span style="font-size: 17px; font-weight: 500">{{g.label}}</span>
+</button>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isSettings}}" hint-placeholder-val="{{ false }}">
+<div style="height: 100%; box-sizing: border-box; padding: 56px 24px 32px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<button onClick="{{goHome}}" aria-label="{{t.back}}" style="width: 56px; height: 56px; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+</button>
+<h1 style="margin: 0; font-size: 20px; font-weight: 600">{{t.settings}}</h1>
+<span style="width: 56px; height: 56px"></span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h2 id="lang-heading" style="margin: 0; font-size: 17px; font-weight: 600">{{t.langHeading}}</h2>
+<div role="radiogroup" aria-labelledby="lang-heading" style="display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{langOptions}}" as="o" hint-placeholder-count="2">
+<button role="radio" aria-checked="{{o.checked}}" lang="{{o.code}}" onClick="{{o.pick}}" style="display: flex; align-items: center; gap: 14px; min-height: 72px; padding: 0 16px 0 20px; border-radius: 24px; border: none; background: {{o.bg}}; box-shadow: {{o.ring}}; color: #4A3F3A; cursor: pointer; text-align: left">
+<span style="flex: 1; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 18px; font-weight: 600">{{o.name}}</span>
+<span style="font-size: 14px; color: #6B5D57">{{o.sub}}</span>
+</span>
+<sc-if value="{{o.isOn}}" hint-placeholder-val="{{ false }}">
+<span aria-hidden="true" style="width: 32px; height: 32px; border-radius: 50%; background: #4B6B46; color: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+</span>
+</sc-if>
+<sc-if value="{{o.isOff}}" hint-placeholder-val="{{ true }}">
+<span aria-hidden="true" style="width: 28px; height: 28px; border-radius: 50%; border: 2px solid #8C7F79"></span>
+</sc-if>
+</button>
+</sc-for>
+</div>
+<p style="margin: 4px 0 0; font-size: 15px; color: #6B5D57">{{t.langNote}}</p>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isSet}}" hint-placeholder-val="{{ false }}">
+<div style="height: 100%; box-sizing: border-box; padding: 56px 28px 36px; display: flex; flex-direction: column; align-items: center">
+<div style="width: 100%; display: flex; align-items: center; justify-content: space-between">
+<button onClick="{{goHome}}" aria-label="{{t.back}}" style="width: 56px; height: 56px; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+</button>
+<h1 style="margin: 0; font-size: 20px; font-weight: 600">{{catLabel}}</h1>
+<span style="width: 56px; height: 56px"></span>
+</div>
+<div role="group" aria-label="{{t.modeGroup}}" style="margin-top: 20px; width: 100%; box-sizing: border-box; padding: 6px; border-radius: 999px; background: #F1E8E2; display: flex; gap: 6px">
+<button onClick="{{setTimer}}" aria-pressed="{{timerPressed}}" style="flex: 1; height: 52px; border: none; border-radius: 999px; background: {{timerBg}}; box-shadow: {{timerRing}}; color: #4A3F3A; font-size: 16px; font-weight: {{timerWeight}}; cursor: pointer">{{t.countdown}}</button>
+<button onClick="{{setAlarm}}" aria-pressed="{{alarmPressed}}" style="flex: 1; height: 52px; border: none; border-radius: 999px; background: {{alarmBg}}; box-shadow: {{alarmRing}}; color: #4A3F3A; font-size: 16px; font-weight: {{alarmWeight}}; cursor: pointer">{{t.alarm}}</button>
+</div>
+<div aria-live="polite" aria-atomic="true" style="margin-top: 20px; width: 232px; height: 232px; border-radius: 50%; background: {{catBg}}; color: {{catInk}}; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px">
+<dc-import name="Icon3d" kind="{{catKey}}" size="60" hint-size="60px,60px"></dc-import>
+<span style="font-size: 60px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums">{{bigValue}}</span>
+<span style="font-size: 18px; font-weight: 500">{{bigUnit}}</span>
+</div>
+<div style="margin-top: 22px; display: flex; gap: 56px">
+<button onClick="{{dec}}" aria-label="{{decLabel}}" style="width: 72px; height: 72px; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg>
+</button>
+<button onClick="{{inc}}" aria-label="{{incLabel}}" style="width: 72px; height: 72px; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+</button>
+</div>
+<button onClick="{{toggleShared}}" role="switch" aria-checked="{{sharedStr}}" style="margin-top: 22px; width: 100%; height: 60px; padding: 0 10px 0 12px; border: none; border-radius: 999px; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; gap: 12px; cursor: pointer">
+<span style="display: flex" aria-hidden="true">
+<span style="width: 34px; height: 34px; border-radius: 50%; background: #F6DCD6; border: 2px solid #F1E8E2; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600">{{t.whoMom}}</span>
+<span style="width: 34px; height: 34px; margin-left: -8px; border-radius: 50%; background: #DCE7F0; border: 2px solid #F1E8E2; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600">{{t.whoDad}}</span>
+<span style="width: 34px; height: 34px; margin-left: -8px; border-radius: 50%; background: #DCE8D8; border: 2px solid #F1E8E2; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600">{{t.whoGran}}</span>
+</span>
+<span style="flex: 1; text-align: left; font-size: 16px; font-weight: 500">{{t.shared}}</span>
+<span aria-hidden="true" style="width: 52px; height: 32px; border-radius: 999px; background: {{switchTrack}}; display: flex; align-items: center; padding: 3px; box-sizing: border-box; justify-content: {{switchJustify}}">
+<span style="width: 26px; height: 26px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 1px 3px rgba(0,0,0,0.2)"></span>
+</span>
+</button>
+<sc-if value="{{showReplace}}" hint-placeholder-val="{{ false }}">
+<p role="note" style="margin: 12px 0 0; font-size: 15px; font-weight: 500; color: #8E4A3F; text-align: center">{{replaceText}}</p>
+</sc-if>
+<div style="margin-top: auto; display: flex; flex-direction: column; align-items: center; gap: 8px">
+<button onClick="{{start}}" aria-label="{{t.start}}" style="width: 100px; height: 100px; border-radius: 50%; border: none; background: {{catInk}}; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 24px rgba(74,63,58,0.14)">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.87l10.5-6.5a1 1 0 0 0 0-1.74L9.5 4.63A1 1 0 0 0 8 5.5z"></path></svg>
+</button>
+<span style="font-size: 16px; font-weight: 500">{{t.start}}</span>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isRun}}" hint-placeholder-val="{{ false }}">
+<div style="height: 100%; box-sizing: border-box; padding: 56px 28px 40px; display: flex; flex-direction: column; align-items: center">
+<div style="width: 100%; display: flex; align-items: center; justify-content: space-between">
+<button onClick="{{goHome}}" aria-label="{{t.home}}" style="width: 56px; height: 56px; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+</button>
+<h1 style="margin: 0; font-size: 20px; font-weight: 600">{{catLabel}}</h1>
+<span style="width: 56px; height: 56px"></span>
+</div>
+<sc-if value="{{isSteps}}" hint-placeholder-val="{{ false }}">
+<ol aria-label="{{t.steps}}" style="margin: 24px 0 0; padding: 0; list-style: none; width: 100%; display: flex; justify-content: space-between; position: relative">
+<li aria-hidden="true" style="position: absolute; left: 50px; right: 50px; top: 25px; height: 3px; border-radius: 2px; background: #EADFCB"></li>
+<sc-for list="{{steps}}" as="st" hint-placeholder-count="3">
+<li aria-current="{{st.ariaCurrent}}" style="width: 100px; display: flex; flex-direction: column; align-items: center; gap: 6px; position: relative">
+<sc-if value="{{st.done}}" hint-placeholder-val="{{ false }}">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: #7E6224; color: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="{{t.stepDone}}"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+</span>
+</sc-if>
+<sc-if value="{{st.current}}" hint-placeholder-val="{{ false }}">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: #F3E6C6; box-shadow: 0 0 0 3px #7E6224; color: #6E541C; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600">{{st.num}}</span>
+</sc-if>
+<sc-if value="{{st.later}}" hint-placeholder-val="{{ true }}">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600">{{st.num}}</span>
+</sc-if>
+<span style="font-size: 15px; font-weight: {{st.weight}}; text-align: center">{{st.name}}</span>
+<span style="font-size: 14px; color: #7A6A62">{{st.minText}}</span>
+</li>
+</sc-for>
+</ol>
+</sc-if>
+<div style="margin-top: {{visTop}}; width: {{visPx}}; height: {{visPx}}">
+<dc-import name="Timer3d" kind="{{catKey}}" progress="{{progress}}" paused="{{paused}}" phase="{{timerPhase}}" size="{{visSize}}" hint-size="260px,260px"></dc-import>
+</div>
+<div role="timer" aria-label="{{timerAria}}" style="margin-top: 6px; display: flex; flex-direction: column; align-items: center; gap: 8px">
+<span aria-hidden="true" style="font-size: 54px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums">{{timeLeft}}</span>
+<div aria-hidden="true" style="width: 200px; height: 6px; border-radius: 3px; background: {{catBg}}; overflow: hidden"><div style="width: {{pctStr}}; height: 100%; border-radius: 3px; background: {{catInk}}"></div></div>
+<span aria-hidden="true" style="font-size: 15px; color: #7A6A62">{{endText}}</span>
+</div>
+<sc-if value="{{paused}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 16px 0 0; font-size: 16px; font-weight: 500; color: #7A6A62">{{t.pausedMsg}}</p>
+</sc-if>
+<sc-if value="{{sharedRun}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 16px 0 0; display: flex; align-items: center; gap: 8px; font-size: 15px; color: #7A6A62">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"></path></svg>
+{{t.sharedRun}}
+</p>
+</sc-if>
+<div style="margin-top: auto; display: flex; gap: 32px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+<button onClick="{{togglePause}}" aria-label="{{pauseLabel}}" style="width: 92px; height: 92px; border-radius: 50%; border: none; background: {{catBg}}; color: {{catInk}}; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<sc-if value="{{paused}}" hint-placeholder-val="{{ false }}">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.87l10.5-6.5a1 1 0 0 0 0-1.74L9.5 4.63A1 1 0 0 0 8 5.5z"></path></svg>
+</sc-if>
+<sc-if value="{{notPaused}}" hint-placeholder-val="{{ true }}">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1.5"></rect><rect x="14" y="5" width="4" height="14" rx="1.5"></rect></svg>
+</sc-if>
+</button>
+<span style="font-size: 16px; font-weight: 500">{{pauseLabel}}</span>
+</div>
+<sc-if value="{{canSkip}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+<button onClick="{{nextStep}}" aria-label="{{t.skipAria}}" style="width: 92px; height: 92px; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 6v12a1 1 0 0 0 1.5.86L15 13.7V18a1 1 0 0 0 2 0V6a1 1 0 0 0-2 0v4.3L6.5 5.14A1 1 0 0 0 5 6z"></path></svg>
+</button>
+<span style="font-size: 16px; font-weight: 500">{{t.skip}}</span>
+</div>
+</sc-if>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+<button onClick="{{stop}}" aria-label="{{t.stopAria}}" style="width: 92px; height: 92px; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2.5"></rect></svg>
+</button>
+<span style="font-size: 16px; font-weight: 500">{{t.stop}}</span>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isDone}}" hint-placeholder-val="{{ false }}">
+<div style="height: 100%; box-sizing: border-box; padding: 96px 28px 56px; background: {{catBg}}; display: flex; flex-direction: column; align-items: center">
+<div class="pulse" style="width: 168px; height: 168px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; position: relative">
+<dc-import name="Icon3d" kind="bell" size="112" hint-size="112px,112px"></dc-import>
+<span style="position: absolute; right: 2px; bottom: 6px; width: 60px; height: 60px; border-radius: 50%; background: {{catBg}}; border: 4px solid #FFFFFF; display: flex; align-items: center; justify-content: center">
+<dc-import name="Icon3d" kind="{{catKey}}" size="44" hint-size="44px,44px"></dc-import>
+</span>
+</div>
+<h1 style="margin: 40px 0 0; font-size: 36px; font-weight: 600">{{t.doneTitle}}</h1>
+<span role="alert" class="sr-only">{{doneAlert}}</span>
+<p style="margin: 10px 0 0; font-size: 18px">{{catLabel}}</p>
+<sc-if value="{{isMilk}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 18px 0 0; font-size: 16px; text-align: center">{{t.milkStarted}}</p>
+</sc-if>
+<div style="margin-top: auto; display: flex; align-items: center; gap: 32px">
+<button onClick="{{snooze}}" style="width: 84px; height: 84px; border-radius: 50%; border: none; background: #FFFFFF; color: #4A3F3A; font-size: 16px; font-weight: 600; cursor: pointer">{{t.plus5}}</button>
+<button onClick="{{dismiss}}" style="width: 128px; height: 128px; border-radius: 50%; border: none; background: {{catInk}}; color: #FFFFFF; font-size: 24px; font-weight: 600; cursor: pointer; box-shadow: 0 10px 24px rgba(74,63,58,0.16)">{{t.dismiss}}</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isSide}}" hint-placeholder-val="{{ false }}">
+<div style="height: 100%; box-sizing: border-box; padding: 96px 28px 56px; background: #F6DCD6; display: flex; flex-direction: column; align-items: center">
+<div class="pulse" style="width: 136px; height: 136px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; position: relative">
+<dc-import name="Icon3d" kind="pump" size="96" hint-size="96px,96px"></dc-import>
+<span style="position: absolute; right: -6px; bottom: 0; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center">
+<dc-import name="Icon3d" kind="check" size="56" hint-size="56px,56px"></dc-import>
+</span>
+</div>
+<h1 style="margin: 32px 0 0; font-size: 34px; font-weight: 600">{{t.sideTitle}}</h1>
+<span role="alert" class="sr-only">{{t.sideAlert}}</span>
+<p style="margin: 8px 0 0; font-size: 18px">{{t.sideQ}}</p>
+<div role="group" aria-label="{{t.sideGroup}}" style="margin-top: 40px; display: flex; gap: 16px">
+<button onClick="{{sideLeft}}" style="width: 100px; height: 100px; border-radius: 50%; border: none; background: #FFFFFF; color: #8E4A3F; font-size: 20px; font-weight: 600; cursor: pointer">{{t.sideL}}</button>
+<button onClick="{{sideRight}}" style="width: 100px; height: 100px; border-radius: 50%; border: none; background: #FFFFFF; color: #8E4A3F; font-size: 20px; font-weight: 600; cursor: pointer">{{t.sideR}}</button>
+<button onClick="{{sideBoth}}" style="width: 100px; height: 100px; border-radius: 50%; border: none; background: #8E4A3F; color: #FFFFFF; font-size: 20px; font-weight: 600; cursor: pointer">{{t.sideB}}</button>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; gap: 20px">
+<button onClick="{{snooze}}" style="width: 84px; height: 84px; border-radius: 50%; border: none; background: #FFFFFF; color: #4A3F3A; font-size: 16px; font-weight: 600; cursor: pointer">{{t.plus5}}</button>
+<button onClick="{{sideSkip}}" style="height: 56px; padding: 0 28px; border-radius: 999px; border: none; background: transparent; color: #4A3F3A; font-size: 17px; font-weight: 500; cursor: pointer">{{t.skipSide}}</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isNext}}" hint-placeholder-val="{{ false }}">
+<div style="height: 100%; box-sizing: border-box; padding: 64px 28px 40px; display: flex; flex-direction: column; align-items: center">
+<span style="height: 40px; padding: 0 16px; border-radius: 999px; background: #F1E8E2; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+{{savedText}}
+</span>
+<h1 style="margin: 36px 0 0; font-size: 28px; font-weight: 600; text-align: center">{{t.nextQ}}</h1>
+<div aria-live="polite" aria-atomic="true" style="margin-top: 28px; width: 248px; height: 248px; border-radius: 50%; background: #F6DCD6; color: #8E4A3F; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px">
+<dc-import name="Icon3d" kind="bell" size="56" hint-size="56px,56px"></dc-import>
+<span style="font-size: 64px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums">{{nextDraftText}}</span>
+<span style="font-size: 18px; font-weight: 500">{{nextInText}}</span>
+</div>
+<p style="margin: 16px 0 0; font-size: 15px; color: #7A6A62">{{t.habit}}</p>
+<div style="margin-top: 20px; display: flex; gap: 56px">
+<button onClick="{{nextDec}}" aria-label="{{t.earlier15}}" style="width: 72px; height: 72px; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg>
+</button>
+<button onClick="{{nextInc}}" aria-label="{{t.later15}}" style="width: 72px; height: 72px; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+</button>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; gap: 24px">
+<button onClick="{{nextNo}}" style="width: 92px; height: 56px; border-radius: 999px; border: none; background: transparent; color: #4A3F3A; font-size: 17px; font-weight: 500; cursor: pointer">{{t.no}}</button>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+<button onClick="{{nextYes}}" aria-label="{{t.remind}}" style="width: 104px; height: 104px; border-radius: 50%; border: none; background: #8E4A3F; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 24px rgba(74,63,58,0.14)">
+<svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"></path><path d="M10 20.5a2 2 0 0 0 4 0"></path></svg>
+</button>
+<span style="font-size: 16px; font-weight: 500">{{t.remind}}</span>
+</div>
+<span style="width: 92px"></span>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isHistory}}" hint-placeholder-val="{{ false }}">
+<div style="height: 100%; box-sizing: border-box; padding: 56px 24px 32px; display: flex; flex-direction: column; gap: 20px; overflow-y: auto">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<button onClick="{{goHome}}" aria-label="{{t.back}}" style="width: 56px; height: 56px; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+</button>
+<h1 style="margin: 0; font-size: 20px; font-weight: 600">{{t.historyTitle}}</h1>
+<span style="width: 56px; height: 56px"></span>
+</div>
+<sc-if value="{{hasLastPump}}" hint-placeholder-val="{{ true }}">
+<div style="border-radius: 28px; background: #F6DCD6; padding: 20px; display: flex; align-items: center; gap: 16px">
+<span style="width: 64px; height: 64px; flex-shrink: 0; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<dc-import name="Icon3d" kind="pump" size="52" hint-size="52px,52px"></dc-import>
+</span>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 15px; color: #7A3E34">{{t.lastPumped}}</span>
+<span style="font-size: 26px; font-weight: 600">{{lastAgo}}</span>
+<span style="font-size: 16px">{{lastDetail}}</span>
+</div>
+</div>
+</sc-if>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column">
+<sc-for list="{{logShown}}" as="it" hint-placeholder-count="5">
+<li style="display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid #EFE7E1">
+<span aria-hidden="true" style="width: 48px; height: 48px; flex-shrink: 0; border-radius: 50%; background: {{it.bg}}; display: flex; align-items: center; justify-content: center"><dc-import name="Icon3d" kind="{{it.kind}}" size="36" hint-size="36px,36px"></dc-import></span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 17px; font-weight: 500">{{it.title}}</span><span style="font-size: 14px; color: #7A6A62">{{it.detail}}</span></span>
+<span style="font-size: 16px; font-variant-numeric: tabular-nums">{{it.time}}</span>
+</li>
+</sc-for>
+</ul>
+</div>
+</sc-if>
+
+<sc-if value="{{isSafe}}" hint-placeholder-val="{{ false }}">
+<div style="height: 100%; box-sizing: border-box; padding: 56px 28px 40px; display: flex; flex-direction: column; align-items: center">
+<div style="width: 100%; display: flex; align-items: center; justify-content: space-between">
+<button onClick="{{goHome}}" aria-label="{{t.home}}" style="width: 56px; height: 56px; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+</button>
+<h1 style="margin: 0; font-size: 20px; font-weight: 600">{{t.safeTitle}}</h1>
+<sc-if value="{{safeExpired}}" hint-placeholder-val="{{ false }}"><span role="alert" class="sr-only">{{t.expiredAria}}</span></sc-if>
+<span style="width: 56px; height: 56px"></span>
+</div>
+<div role="group" aria-label="{{t.placeGroup}}" style="margin-top: 24px; width: 100%; box-sizing: border-box; padding: 6px; border-radius: 999px; background: #F1E8E2; display: flex; gap: 6px">
+<button onClick="{{safeOut}}" aria-pressed="{{safeOutPressed}}" style="flex: 1; height: 52px; border: none; border-radius: 999px; background: {{safeOutBg}}; box-shadow: {{safeOutRing}}; color: #4A3F3A; font-size: 16px; font-weight: {{safeOutWeight}}; cursor: pointer">{{t.placeOut}}</button>
+<button onClick="{{safeFridge}}" aria-pressed="{{safeFridgePressed}}" style="flex: 1; height: 52px; border: none; border-radius: 999px; background: {{safeFridgeBg}}; box-shadow: {{safeFridgeRing}}; color: #4A3F3A; font-size: 16px; font-weight: {{safeFridgeWeight}}; cursor: pointer">{{t.placeFridge}}</button>
+</div>
+<div style="margin-top: 40px; width: 280px; height: 280px; position: relative">
+<svg width="280" height="280" viewBox="0 0 280 280" aria-hidden="true">
+<circle cx="140" cy="140" r="128" fill="none" stroke="#DCE7F0" stroke-width="16"></circle>
+<circle cx="140" cy="140" r="128" fill="none" stroke="#456683" stroke-width="16" stroke-linecap="round" stroke-dasharray="804.25" stroke-dashoffset="{{safeDash}}" transform="rotate(-90 140 140)"></circle>
+</svg>
+<div role="timer" aria-label="{{safeAria}}" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px">
+<dc-import name="Icon3d" kind="milk" size="48" hint-size="48px,48px"></dc-import>
+<span aria-hidden="true" style="font-size: 15px; color: #7A6A62">{{safeTop}}</span>
+<span aria-hidden="true" style="font-size: 52px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums">{{safeLeftText}}</span>
+<span aria-hidden="true" style="font-size: 16px; font-weight: 500; color: #456683">{{safeEndText}}</span>
+</div>
+</div>
+<div style="margin-top: auto; display: flex; gap: 48px">
+<sc-if value="{{safeOk}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+<button onClick="{{milkUsed}}" aria-label="{{t.fed}}" style="width: 104px; height: 104px; border-radius: 50%; border: none; background: #456683; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+</button>
+<span style="font-size: 16px; font-weight: 500">{{t.fed}}</span>
+</div>
+</sc-if>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+<button onClick="{{milkTossed}}" aria-label="{{t.discard}}" style="width: 104px; height: 104px; border-radius: 50%; border: none; background: #F1E8E2; color: #4A3F3A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"></path></svg>
+</button>
+<span style="font-size: 16px; font-weight: 500">{{t.discard}}</span>
+</div>
+</div>
+</div>
+</sc-if>
+
+<div aria-hidden="true" style="position: absolute; top: 11px; left: 132px; width: 126px; height: 37px; border-radius: 20px; background: #000000"></div>
+<div aria-hidden="true" style="position: absolute; bottom: 8px; left: 128px; width: 134px; height: 5px; border-radius: 3px; background: #4A3F3A; opacity: 0.85"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"lang":{"editor":"enum","options":["vi","en"],"default":"vi","section":"Prototype"},"demoSpeed":{"editor":"boolean","default":true,"section":"Prototype"},"startScreen":{"editor":"enum","options":["home","set","run","done","side","next","history","safe","settings"],"default":"home","section":"Prototype"},"startCat":{"editor":"enum","options":["pump","milk","food","chao","banh","other"],"default":"pump","section":"Prototype"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(...args) {
+    super(...args);
+    var p = this.props || args[0] || {};
+    var sc = p.startScreen || 'home';
+    var cat = p.startCat || 'pump';
+    var m = this.cats()[cat].min;
+    var now = this.nowMins();
+    var st = {
+      lang: p.lang === 'en' ? 'en' : 'vi',
+      screen: sc, cat: cat, mode: 'timer', minutes: m, cookMin: 45, alarmAt: this.defaultAlarm(),
+      total: 0, left: 0, running: false, paused: false, stepIdx: -1, planMins: m,
+      shared: true, runCat: cat, undo: null,
+      lastPump: { at: Date.now() - 120 * 60000, side: 'L' },
+      nextAt: (Math.ceil((now + 60) / 15) * 15) % 1440,
+      nextDraft: (Math.ceil((now + 180) / 15) * 15) % 1440,
+      safeMode: 'out', safeTotal: 0, safeLeft: 0, safeRunning: false,
+      log: [
+        { kind: 'pump', side: 'L', mins: 20, at: now - 120 },
+        { kind: 'chao', mins: 90, who: 'gran', at: now - 170 },
+        { kind: 'pump', side: 'R', mins: 18, at: now - 260 },
+        { kind: 'milk', mins: 30, who: 'dad', at: now - 345 },
+        { kind: 'pump', side: 'B', mins: 22, at: now - 450 }
+      ]
+    };
+    if (sc === 'run') {
+      st.running = true;
+      if (cat === 'chao') { st.stepIdx = 1; st.total = 45 * 60; st.left = 1930; st.planMins = 90; }
+      else { st.total = m * 60; st.left = Math.round(m * 60 * 0.62); }
+    }
+    if (sc === 'safe') { st.cat = 'milk'; st.safeRunning = true; st.safeTotal = this.safeLimit('out') * 60; st.safeLeft = st.safeTotal - 120; }
+    if (sc === 'side' || sc === 'next') { st.cat = 'pump'; st.planMins = 20; }
+    st.runCat = st.cat;
+    this.state = st;
+  }
+  dict() {
+    return {
+      vi: {
+        homeTitle: 'Nhắc mẹ việc gì?', settings: 'Cài đặt', historyBtn: 'Lịch sử hôm nay', undo: 'Hoàn tác',
+        cat_pump: 'Hút sữa', cat_milk: 'Rã đông sữa', cat_food: 'Rã đông đồ ăn', cat_chao: 'Nấu cháo', cat_banh: 'Bánh ăn dặm', cat_other: 'Khác',
+        last: 'Lần trước', agoNow: 'Vừa xong', agoMin: '{m} phút trước', agoHour: '{h} giờ trước',
+        nextAt: 'Nhắc lần sau lúc {t}', noNext: 'Chưa đặt nhắc lần sau',
+        safeChip: 'Sữa · dùng trong', safeChipExp: 'Sữa đã quá hạn',
+        back: 'Quay lại', home: 'Về trang chủ',
+        modeGroup: 'Kiểu hẹn giờ', countdown: 'Đếm ngược', alarm: 'Báo thức',
+        unitMin: 'phút', unitSteps: 'phút · 3 bước', unitAlarm: 'giờ báo', unitAlarmTmr: 'giờ báo · ngày mai',
+        dec5: 'Bớt 5 phút', dec1: 'Bớt 1 phút', inc5: 'Thêm 5 phút', inc1: 'Thêm 1 phút',
+        earlier15: 'Sớm hơn 15 phút', later15: 'Muộn hơn 15 phút',
+        shared: 'Cả nhà cùng thấy', whoMom: 'Mẹ', whoDad: 'Bố', whoGran: 'Bà',
+        replace: 'Đang chạy {x} ({t}). Bắt đầu sẽ thay thế.', start: 'Bắt đầu',
+        steps: 'Các bước', step_soak: 'Ngâm gạo', step_cook: 'Nấu', step_cool: 'Để nguội', stepDone: 'Xong',
+        then: 'Sau đó: {x}', lastStep: 'Bước cuối', doneAt: 'Xong lúc {t}',
+        pausedMsg: 'Đang tạm dừng', sharedRun: 'Bố và Bà cũng thấy',
+        pause: 'Tạm dừng', resume: 'Tiếp tục', skip: 'Bước tiếp', skipAria: 'Sang bước tiếp', stop: 'Dừng', stopAria: 'Dừng hẳn',
+        left: 'Còn {x}', hm: '{h} giờ {m} phút', hOnly: '{h} giờ', mOnly: '{m} phút',
+        doneTitle: 'Xong rồi!', doneAlert: 'Xong rồi: {x}', milkStarted: 'Đã bắt đầu đếm hạn dùng sữa', plus5: '+5 phút', dismiss: 'Tắt',
+        sideTitle: 'Hút xong rồi', sideQ: 'Bên nào?', sideGroup: 'Bên đã hút', sideAlert: 'Hút sữa xong rồi. Chọn bên đã hút.',
+        sideL: 'Trái', sideR: 'Phải', sideB: 'Cả hai', skipSide: 'Bỏ qua',
+        sideDetail_L: 'Bên trái', sideDetail_R: 'Bên phải', sideDetail_B: 'Cả hai bên', noSide: 'Không ghi bên', remindAt: 'nhắc lúc {t}',
+        saved: 'Đã lưu', nextQ: 'Nhắc lần sau?', inX: 'sau {x}', habit: 'Giống thói quen mấy hôm nay', no: 'Không', remind: 'Nhắc tôi',
+        historyTitle: 'Hôm nay', lastPumped: 'Lần hút trước',
+        thawedMilk: 'Sữa rã đông', outcome_fed: 'bé đã bú', outcome_toss: 'đổ bỏ', place_out: 'để ngoài', place_fridge: 'trong tủ lạnh',
+        who_dad: 'Bố', who_gran: 'Bà',
+        safeTitle: 'Sữa đã rã đông', placeGroup: 'Sữa để ở đâu', placeOut: 'Để ngoài', placeFridge: 'Trong tủ lạnh',
+        useWithin: 'Dùng trong', expired: 'Đã quá hạn', before: 'Trước {t}', shouldDiscard: 'Nên đổ bỏ',
+        safeAria: 'Sữa dùng trong {x}', expiredAria: 'Sữa đã quá hạn, nên đổ bỏ', fed: 'Bé đã bú', discard: 'Đổ bỏ',
+        stopped: 'Đã dừng {x}', tossed: 'Đã đổ bỏ sữa',
+        langHeading: 'Ngôn ngữ', langNote: 'Áp dụng ngay cho toàn bộ ứng dụng.'
+      },
+      en: {
+        homeTitle: 'What are you timing?', settings: 'Settings', historyBtn: "Today's history", undo: 'Undo',
+        cat_pump: 'Pumping', cat_milk: 'Thaw milk', cat_food: 'Thaw food', cat_chao: 'Rice porridge', cat_banh: 'Baby biscuits', cat_other: 'Other',
+        last: 'Last', agoNow: 'Just now', agoMin: '{m} min ago', agoHour: '{h} h ago',
+        nextAt: 'Next reminder at {t}', noNext: 'No next reminder set',
+        safeChip: 'Milk · use within', safeChipExp: 'Milk has expired',
+        back: 'Back', home: 'Home',
+        modeGroup: 'Timer type', countdown: 'Countdown', alarm: 'Alarm',
+        unitMin: 'min', unitSteps: 'min · 3 steps', unitAlarm: 'alarm time', unitAlarmTmr: 'alarm · tomorrow',
+        dec5: '5 minutes less', dec1: '1 minute less', inc5: '5 minutes more', inc1: '1 minute more',
+        earlier15: '15 minutes earlier', later15: '15 minutes later',
+        shared: 'Share with family', whoMom: 'Mom', whoDad: 'Dad', whoGran: 'Gran',
+        replace: '{x} is running ({t}). Starting will replace it.', start: 'Start',
+        steps: 'Steps', step_soak: 'Soak rice', step_cook: 'Cook', step_cool: 'Cool down', stepDone: 'Done',
+        then: 'Next: {x}', lastStep: 'Last step', doneAt: 'Done at {t}',
+        pausedMsg: 'Paused', sharedRun: 'Dad and Gran can see this',
+        pause: 'Pause', resume: 'Resume', skip: 'Next step', skipAria: 'Go to next step', stop: 'Stop', stopAria: 'Stop timer',
+        left: '{x} left', hm: '{h} h {m} min', hOnly: '{h} h', mOnly: '{m} min',
+        doneTitle: 'All done!', doneAlert: 'Done: {x}', milkStarted: 'Use-by countdown has started', plus5: '+5 min', dismiss: 'Stop',
+        sideTitle: 'Pumping done', sideQ: 'Which side?', sideGroup: 'Side pumped', sideAlert: 'Pumping done. Choose the side.',
+        sideL: 'Left', sideR: 'Right', sideB: 'Both', skipSide: 'Skip',
+        sideDetail_L: 'Left side', sideDetail_R: 'Right side', sideDetail_B: 'Both sides', noSide: 'Side not recorded', remindAt: 'reminder {t}',
+        saved: 'Saved', nextQ: 'Remind me next time?', inX: 'in {x}', habit: 'Based on your last few days', no: 'No', remind: 'Remind me',
+        historyTitle: 'Today', lastPumped: 'Last pumped',
+        thawedMilk: 'Thawed milk', outcome_fed: 'baby fed', outcome_toss: 'discarded', place_out: 'room temperature', place_fridge: 'in the fridge',
+        who_dad: 'Dad', who_gran: 'Gran',
+        safeTitle: 'Thawed milk', placeGroup: 'Where is the milk?', placeOut: 'Room temp', placeFridge: 'In fridge',
+        useWithin: 'Use within', expired: 'Expired', before: 'Before {t}', shouldDiscard: 'Please discard',
+        safeAria: 'Milk usable for {x}', expiredAria: 'Milk has expired, please discard', fed: 'Baby fed', discard: 'Discard',
+        stopped: 'Stopped {x}', tossed: 'Milk discarded',
+        langHeading: 'Language', langNote: 'Applies to the whole app right away.'
+      }
+    };
+  }
+  tr(key, vars) {
+    var all = this.dict(), d = all[this.state.lang] || all.vi;
+    var str = d[key] != null ? d[key] : key;
+    if (vars) Object.keys(vars).forEach(function (k) { str = str.split('{' + k + '}').join(vars[k]); });
+    return str;
+  }
+  cats() {
+    return {
+      pump: { bg: '#F6DCD6', ink: '#8E4A3F', min: 20 },
+      milk: { bg: '#DCE7F0', ink: '#456683', min: 30 },
+      food: { bg: '#E5DFF0', ink: '#65568A', min: 60 },
+      chao: { bg: '#F3E6C6', ink: '#7E6224', min: 90 },
+      banh: { bg: '#DCE8D8', ink: '#4B6B46', min: 15 },
+      other: { bg: '#EFE7E1', ink: '#6B5A52', min: 10 }
+    };
+  }
+  stepsFor(cookMin) { return [{ key: 'soak', min: 30 }, { key: 'cook', min: cookMin }, { key: 'cool', min: 15 }]; }
+  safeLimit(mode) { return mode === 'fridge' ? 24 * 60 : 120; }
+  nowMins() { var d = new Date(); return d.getHours() * 60 + d.getMinutes(); }
+  defaultAlarm() { var t = this.nowMins() + 180; return (Math.ceil(t / 15) * 15) % 1440; }
+  pad(n) { return (n < 10 ? '0' : '') + n; }
+  clock(mins) { mins = ((Math.round(mins) % 1440) + 1440) % 1440; return this.pad(Math.floor(mins / 60)) + ':' + this.pad(mins % 60); }
+  fmt(s) {
+    s = Math.max(0, Math.round(s));
+    var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+    return h > 0 ? h + ':' + this.pad(m) + ':' + this.pad(sec) : this.pad(m) + ':' + this.pad(sec);
+  }
+  hm(mins) {
+    var h = Math.floor(mins / 60), m = mins % 60;
+    if (h > 0 && m > 0) return this.tr('hm', { h: h, m: m });
+    if (h > 0) return this.tr('hOnly', { h: h });
+    return this.tr('mOnly', { m: m });
+  }
+  spoken(s) { return this.tr('left', { x: this.hm(Math.ceil(Math.max(0, s) / 60)) }); }
+  ago(at) {
+    var m = Math.floor((Date.now() - at) / 60000);
+    if (m < 1) return this.tr('agoNow');
+    if (m < 60) return this.tr('agoMin', { m: m });
+    return this.tr('agoHour', { h: Math.floor(m / 60) });
+  }
+  addLog(e) {
+    e.at = this.nowMins();
+    return [e].concat(this.state.log);
+  }
+  logRow(e) {
+    var cats = this.cats();
+    var title = e.outcome ? this.tr('thawedMilk') + ' · ' + this.tr('outcome_' + e.outcome) : this.tr('cat_' + e.kind) + (e.side ? ' · ' + this.tr('side' + e.side) : '');
+    var detail = e.outcome ? this.tr('place_' + e.place) : this.tr('mOnly', { m: e.mins }) + (e.who ? ' · ' + this.tr('who_' + e.who) : '');
+    return { kind: e.kind, bg: (cats[e.kind] || cats.other).bg, title: title, detail: detail, time: this.clock(e.at) };
+  }
+  componentDidMount() {
+    var self = this;
+    this.iv = setInterval(function () { self.tick(); }, 1000);
+  }
+  componentWillUnmount() { clearInterval(this.iv); }
+  tick() {
+    var s = this.state, step = this.props.demoSpeed === false ? 1 : 60, upd = {}, any = false;
+    if (s.undo) { any = true; upd.undo = s.undo.ttl > 1 ? Object.assign({}, s.undo, { ttl: s.undo.ttl - 1 }) : null; }
+    if (s.safeRunning && s.safeLeft > 0) {
+      upd.safeLeft = Math.max(0, s.safeLeft - step); any = true;
+      if (upd.safeLeft === 0 && ['run', 'done', 'side', 'next'].indexOf(s.screen) < 0) upd.screen = 'safe';
+    }
+    if (s.running && !s.paused) {
+      any = true;
+      var left = s.left - step;
+      if (left > 0) upd.left = left;
+      else Object.assign(upd, this.finishStep());
+    }
+    if (any) this.setState(upd);
+  }
+  finishStep() {
+    var s = this.state, rk = s.runCat || s.cat;
+    var steps = this.stepsFor(s.cookMin);
+    if (s.stepIdx >= 0 && s.stepIdx < steps.length - 1) {
+      var ni = s.stepIdx + 1, t = steps[ni].min * 60;
+      return { stepIdx: ni, total: t, left: t };
+    }
+    var upd = { running: false, paused: false, left: 0, stepIdx: -1 };
+    if (rk === 'pump') { upd.screen = 'side'; return upd; }
+    upd.screen = 'done';
+    upd.log = this.addLog({ kind: rk, mins: s.planMins });
+    if (rk === 'milk') { var lim = this.safeLimit(s.safeMode) * 60; upd.safeRunning = true; upd.safeTotal = lim; upd.safeLeft = lim; }
+    return upd;
+  }
+  renderVals() {
+    var self = this, s = this.state, cats = this.cats();
+    var all = this.dict(), d = all[s.lang] || all.vi;
+    var T = function (k, v) { return self.tr(k, v); };
+    var rk = s.runCat || s.cat, rc = cats[rk] || cats.pump;
+    var vk = s.screen === 'set' ? s.cat : rk, c = cats[vk] || cats.pump;
+    var label = T('cat_' + vk), runLabel = T('cat_' + rk);
+    var pick = function (k) { return function () { self.setState({ cat: k, minutes: cats[k].min, cookMin: 45, mode: 'timer', alarmAt: self.defaultAlarm(), screen: 'set' }); }; };
+    var isAlarm = s.mode === 'alarm';
+    var isChaoPlan = s.cat === 'chao' && !isAlarm;
+    var planMins = isChaoPlan ? 45 + s.cookMin : s.minutes;
+    var steps = this.stepsFor(s.cookMin);
+    var isSteps = rk === 'chao' && s.stepIdx >= 0;
+    var pressedBg = '#FFFFFF', ring = '0 0 0 1.5px #4A3F3A';
+    var pickSide = function (code) {
+      return function () {
+        self.setState({
+          log: self.addLog({ kind: 'pump', side: code, mins: s.planMins }),
+          lastPump: { at: Date.now(), side: code },
+          nextDraft: (Math.ceil((self.nowMins() + 180) / 15) * 15) % 1440,
+          screen: 'next'
+        });
+      };
+    };
+    var nextIn = ((s.nextDraft - this.nowMins()) + 1440) % 1440;
+    var lp = s.lastPump;
+    var safeEndMins = this.nowMins() + Math.ceil(s.safeLeft / 60);
+    var safeLim = this.safeLimit(s.safeMode) * 60;
+    var setSafe = function (mode) {
+      return function () {
+        var lim = self.safeLimit(mode) * 60, used = s.safeTotal - s.safeLeft;
+        self.setState({ safeMode: mode, safeTotal: lim, safeLeft: Math.max(0, lim - used) });
+      };
+    };
+    var endMilk = function (outcome) {
+      return function () {
+        self.setState({ safeRunning: false, safeLeft: 0, log: self.addLog({ kind: 'milk', outcome: outcome, place: s.safeMode }), screen: 'home' });
+      };
+    };
+    var langOpt = function (code, name, sub) {
+      var on = s.lang === code;
+      return { code: code, name: name, sub: sub, pick: function () { self.setState({ lang: code }); }, checked: on ? 'true' : 'false', isOn: on, isOff: !on, bg: on ? '#FFFFFF' : '#F1E8E2', ring: on ? '0 0 0 2px #4A3F3A' : 'none' };
+    };
+    var undoText = s.undo ? (s.undo.key === 'stopped' ? T('stopped', { x: T('cat_' + s.undo.kind) }) : T('tossed')) : '';
+    return {
+      t: d, langCode: s.lang,
+      isHome: s.screen === 'home', isSet: s.screen === 'set', isRun: s.screen === 'run', isDone: s.screen === 'done',
+      isSide: s.screen === 'side', isNext: s.screen === 'next', isHistory: s.screen === 'history', isSafe: s.screen === 'safe',
+      isSettings: s.screen === 'settings',
+      isMilk: rk === 'milk',
+      showChip: s.running,
+      catLabel: label, catBg: c.bg, catInk: c.ink, catKey: vk,
+      runTitle: isSteps ? runLabel + ' · ' + T('step_' + steps[s.stepIdx].key) : runLabel,
+      grid: ['pump', 'milk', 'food', 'chao', 'banh', 'other'].map(function (k) { return { kind: k, bg: cats[k].bg, label: T('cat_' + k), pick: pick(k) }; }),
+      goHome: function () { self.setState({ screen: 'home' }); },
+      openRun: function () { self.setState({ screen: 'run' }); },
+      openHistory: function () { self.setState({ screen: 'history' }); },
+      openSafe: function () { self.setState({ screen: 'safe' }); },
+      openSettings: function () { self.setState({ screen: 'settings' }); },
+
+      langOptions: [langOpt('vi', 'Tiếng Việt', 'Vietnamese'), langOpt('en', 'English', 'Tiếng Anh')],
+
+      hasLastPump: !!lp,
+      lastPumpText: lp ? T('last') + ' · ' + this.ago(lp.at).toLowerCase() + (lp.side ? ' · ' + T('side' + lp.side) : '') : '',
+      nextText: s.nextAt !== null ? T('nextAt', { t: this.clock(s.nextAt) }) : T('noNext'),
+      lastAgo: lp ? this.ago(lp.at) : '',
+      lastDetail: lp ? (lp.side ? T('sideDetail_' + lp.side) : T('noSide')) + (s.nextAt !== null ? ' · ' + T('remindAt', { t: this.clock(s.nextAt) }) : '') : '',
+      logShown: s.log.slice(0, 6).map(function (e) { return self.logRow(e); }),
+
+      setTimer: function () { self.setState({ mode: 'timer' }); },
+      setAlarm: function () { self.setState({ mode: 'alarm' }); },
+      timerPressed: isAlarm ? 'false' : 'true', alarmPressed: isAlarm ? 'true' : 'false',
+      timerBg: isAlarm ? 'transparent' : pressedBg, alarmBg: isAlarm ? pressedBg : 'transparent',
+      timerRing: isAlarm ? 'none' : ring, alarmRing: isAlarm ? ring : 'none',
+      timerWeight: isAlarm ? 400 : 600, alarmWeight: isAlarm ? 600 : 400,
+      bigValue: isAlarm ? this.clock(s.alarmAt) : String(planMins),
+      bigUnit: isAlarm ? (s.alarmAt <= this.nowMins() ? T('unitAlarmTmr') : T('unitAlarm')) : (isChaoPlan ? T('unitSteps') : T('unitMin')),
+      decLabel: isAlarm ? T('earlier15') : (isChaoPlan || s.minutes > 5 ? T('dec5') : T('dec1')),
+      incLabel: isAlarm ? T('later15') : (isChaoPlan || s.minutes >= 5 ? T('inc5') : T('inc1')),
+      dec: function () {
+        if (isAlarm) self.setState({ alarmAt: (s.alarmAt + 1440 - 15) % 1440 });
+        else if (isChaoPlan) self.setState({ cookMin: Math.max(10, s.cookMin - 5) });
+        else self.setState({ minutes: Math.max(1, s.minutes - (s.minutes > 5 ? 5 : 1)) });
+      },
+      inc: function () {
+        if (isAlarm) self.setState({ alarmAt: (s.alarmAt + 15) % 1440 });
+        else if (isChaoPlan) self.setState({ cookMin: Math.min(180, s.cookMin + 5) });
+        else self.setState({ minutes: Math.min(240, s.minutes + (s.minutes >= 5 ? 5 : 1)) });
+      },
+      toggleShared: function () { self.setState({ shared: !s.shared }); },
+      sharedStr: s.shared ? 'true' : 'false',
+      switchTrack: s.shared ? '#4B6B46' : '#8C7F79', switchJustify: s.shared ? 'flex-end' : 'flex-start',
+      start: function () {
+        if (isChaoPlan) {
+          var t0 = steps[0].min * 60;
+          self.setState({ runCat: s.cat, stepIdx: 0, total: t0, left: t0, planMins: planMins, running: true, paused: false, screen: 'run' });
+          return;
+        }
+        var secs = isAlarm ? (((s.alarmAt - self.nowMins()) + 1440) % 1440 || 1440) * 60 : s.minutes * 60;
+        self.setState({ runCat: s.cat, stepIdx: -1, total: secs, left: secs, planMins: Math.round(secs / 60), running: true, paused: false, screen: 'run' });
+      },
+      showReplace: s.running && s.screen === 'set',
+      replaceText: T('replace', { x: runLabel, t: this.fmt(s.left) }),
+
+      isSteps: isSteps,
+      steps: steps.map(function (x, i) {
+        var done = isSteps && i < s.stepIdx, cur = isSteps && i === s.stepIdx;
+        return { name: T('step_' + x.key), minText: T('mOnly', { m: x.min }), num: i + 1, done: done, current: cur, later: !done && !cur, weight: cur ? 600 : 500, ariaCurrent: cur ? 'step' : 'false' };
+      }),
+      canSkip: isSteps && s.stepIdx < steps.length - 1,
+      nextStep: function () { self.setState(self.finishStep()); },
+      timerPhase: isSteps ? steps[s.stepIdx].key : 'cook',
+      visSize: isSteps ? 196 : 256, visPx: isSteps ? '196px' : '256px', visTop: isSteps ? '10px' : '28px',
+      progress: s.total > 0 ? Math.min(1, Math.max(0, 1 - s.left / s.total)) : 0,
+      pctStr: (s.total > 0 ? Math.round(100 * (1 - s.left / s.total)) : 0) + '%',
+      timeLeft: this.fmt(s.left),
+      timerAria: this.spoken(s.left),
+      endText: isSteps ? (s.stepIdx < steps.length - 1 ? T('then', { x: T('step_' + steps[s.stepIdx + 1].key).toLowerCase() }) : T('lastStep')) : T('doneAt', { t: this.clock(this.nowMins() + Math.ceil(s.left / 60)) }),
+      paused: s.paused, notPaused: !s.paused,
+      sharedRun: s.shared && !s.paused,
+      pauseLabel: s.paused ? T('resume') : T('pause'),
+      togglePause: function () { self.setState({ paused: !s.paused }); },
+      stop: function () {
+        var snap = { runCat: rk, total: s.total, left: s.left, running: true, paused: s.paused, stepIdx: s.stepIdx, planMins: s.planMins, cookMin: s.cookMin };
+        self.setState({ running: false, paused: false, left: 0, stepIdx: -1, screen: 'home', undo: { ttl: 8, key: 'stopped', kind: rk, snap: snap } });
+      },
+      snooze: function () { self.setState({ total: 300, left: 300, stepIdx: -1, planMins: s.planMins + 5, running: true, paused: false, safeRunning: rk === 'milk' ? false : s.safeRunning, screen: 'run' }); },
+      dismiss: function () { self.setState({ screen: rk === 'milk' && s.safeRunning ? 'safe' : 'home' }); },
+      doneAlert: T('doneAlert', { x: label }),
+
+      sideLeft: pickSide('L'), sideRight: pickSide('R'), sideBoth: pickSide('B'),
+      sideSkip: function () { self.setState({ log: self.addLog({ kind: 'pump', mins: s.planMins }), lastPump: { at: Date.now(), side: '' }, screen: 'home' }); },
+
+      savedText: T('saved') + (lp && lp.side ? ' · ' + T('side' + lp.side) : '') + ' · ' + T('mOnly', { m: s.planMins }),
+      nextDraftText: this.clock(s.nextDraft),
+      nextInText: T('inX', { x: this.hm(nextIn) }),
+      nextDec: function () { self.setState({ nextDraft: (s.nextDraft + 1440 - 15) % 1440 }); },
+      nextInc: function () { self.setState({ nextDraft: (s.nextDraft + 15) % 1440 }); },
+      nextYes: function () { self.setState({ nextAt: s.nextDraft, screen: 'home' }); },
+      nextNo: function () { self.setState({ nextAt: null, screen: 'home' }); },
+
+      safeRunning: s.safeRunning,
+      safeOut: setSafe('out'), safeFridge: setSafe('fridge'),
+      safeOutPressed: s.safeMode === 'out' ? 'true' : 'false', safeFridgePressed: s.safeMode === 'fridge' ? 'true' : 'false',
+      safeOutBg: s.safeMode === 'out' ? pressedBg : 'transparent', safeFridgeBg: s.safeMode === 'fridge' ? pressedBg : 'transparent',
+      safeOutRing: s.safeMode === 'out' ? ring : 'none', safeFridgeRing: s.safeMode === 'fridge' ? ring : 'none',
+      safeOutWeight: s.safeMode === 'out' ? 600 : 400, safeFridgeWeight: s.safeMode === 'fridge' ? 600 : 400,
+      safeTop: s.safeLeft > 0 ? T('useWithin') : T('expired'),
+      safeLeftText: this.fmt(s.safeLeft),
+      safeEndText: s.safeLeft > 0 ? T('before', { t: this.clock(safeEndMins) }) : T('shouldDiscard'),
+      safeAria: s.safeLeft > 0 ? T('safeAria', { x: this.hm(Math.ceil(s.safeLeft / 60)) }) : T('expiredAria'),
+      safeDash: safeLim > 0 ? (804.25 * (1 - s.safeLeft / safeLim)).toFixed(2) : 0,
+      milkUsed: endMilk('fed'),
+      milkTossed: function () {
+        var snap = { safeRunning: true, safeLeft: s.safeLeft, safeTotal: s.safeTotal, safeMode: s.safeMode, log: s.log };
+        endMilk('toss')();
+        self.setState({ undo: { ttl: 8, key: 'tossed', kind: 'milk', snap: snap } });
+      },
+      hasUndo: !!s.undo && s.screen === 'home', undoText: undoText,
+      doUndo: function () { if (s.undo) self.setState(Object.assign({}, s.undo.snap, { undo: null })); },
+      safeOk: s.safeLeft > 0, safeExpired: s.safeRunning && s.safeLeft <= 0,
+      safeChipText: s.safeLeft > 0 ? T('safeChip') : T('safeChipExp'),
+      safeChipRight: s.safeLeft > 0 ? this.fmt(s.safeLeft) : T('discard'),
+      safeChipBg: s.safeLeft > 0 ? '#DCE7F0' : '#F6DCD6'
+    };
+  }
+}
+</script>
+</body>
+</html>

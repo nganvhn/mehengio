@@ -1,0 +1,328 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "AlarmAlert.dc.html": {
+      "h": 844,
+      "radius": 40,
+      "title": "8 · Hết giờ · Báo thức toàn màn hình",
+      "w": 390,
+      "x": 1410,
+      "y": 1320
+    },
+    "CookSteps.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 40,
+      "title": "14 · Nấu ăn dặm theo bước",
+      "w": 390,
+      "x": 2350,
+      "y": 2900
+    },
+    "Done.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 40,
+      "title": "4 · Xong rồi",
+      "w": 390,
+      "x": 1410,
+      "y": 0
+    },
+    "Family.dc.html": {
+      "h": 844,
+      "radius": 40,
+      "title": "12 · Hẹn giờ chung cả nhà",
+      "w": 390,
+      "x": 1410,
+      "y": 2900
+    },
+    "History.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 40,
+      "title": "11 · Lịch sử hôm nay",
+      "w": 390,
+      "x": 940,
+      "y": 2900
+    },
+    "Icon3d.dc.html": {
+      "h": 240,
+      "radius": 24,
+      "title": "Bộ icon 3D (dùng chung)",
+      "w": 456,
+      "x": 2380,
+      "y": 0
+    },
+    "Island.dc.html": {
+      "h": 844,
+      "radius": 40,
+      "title": "5 · Rời app · Dynamic Island",
+      "w": 390,
+      "x": 0,
+      "y": 1320
+    },
+    "IslandExpanded.dc.html": {
+      "h": 844,
+      "radius": 40,
+      "title": "6 · Nhấn giữ · Island mở rộng",
+      "w": 390,
+      "x": 470,
+      "y": 1320
+    },
+    "LockScreen.dc.html": {
+      "h": 844,
+      "radius": 40,
+      "title": "7 · Màn hình khóa · Live Activity",
+      "w": 390,
+      "x": 940,
+      "y": 1320
+    },
+    "Main.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 40,
+      "title": "1 · Trang chủ (bấm thử cả luồng)",
+      "w": 390,
+      "x": 0,
+      "y": 0
+    },
+    "MilkSafe.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 40,
+      "title": "13 · Hạn dùng sữa rã đông",
+      "w": 390,
+      "x": 1880,
+      "y": 2900
+    },
+    "NextReminder.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 40,
+      "title": "10 · Nhắc lần sau thông minh",
+      "w": 390,
+      "x": 470,
+      "y": 2900
+    },
+    "PumpSide.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 40,
+      "title": "9 · Lịch sử tự động · chọn bên",
+      "w": 390,
+      "x": 0,
+      "y": 2900
+    },
+    "Run.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 40,
+      "title": "3 · Đang đếm",
+      "w": 390,
+      "x": 940,
+      "y": 0
+    },
+    "Set.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "radius": 40,
+      "title": "2 · Chọn thời gian",
+      "w": 390,
+      "x": 470,
+      "y": 0
+    },
+    "Timer3d.dc.html": {
+      "h": 500,
+      "radius": 24,
+      "title": "Component · Timer3d",
+      "w": 744,
+      "x": 3300,
+      "y": 320
+    },
+    "TimerStyles.dc.html": {
+      "h": 620,
+      "is_interactive": true,
+      "radius": 24,
+      "title": "Đồng hồ theo hành động (6 kiểu, tự chạy)",
+      "w": 840,
+      "x": 2380,
+      "y": 320
+    },
+    "Settings.dc.html": {
+      "x": 2820,
+      "y": 2900,
+      "w": 390,
+      "h": 844,
+      "title": "15 · Cài đặt · Ngôn ngữ",
+      "radius": 40,
+      "is_interactive": true
+    },
+    "HomeEn.dc.html": {
+      "x": 3290,
+      "y": 2900,
+      "w": 390,
+      "h": 844,
+      "title": "16 · Home in English",
+      "radius": 40,
+      "is_interactive": true
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-11-01T12:05:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "noteOrder": [
+    "flowTitle",
+    "outTitle",
+    "n5",
+    "n6",
+    "n7",
+    "n8",
+    "featTitle",
+    "n9",
+    "n10",
+    "n11",
+    "n12",
+    "n13",
+    "n14",
+    "flowNote",
+    "n15"
+  ],
+  "notes": {
+    "featTitle": {
+      "kind": "title1",
+      "maxW": 3680,
+      "text": "Tính năng mới — học từ Baby Tracker, Huckleberry, Nara",
+      "w": 240,
+      "x": 0,
+      "y": 2600
+    },
+    "flowNote": {
+      "fill": "teal",
+      "text": "Play screen 1 to try every flow:\n• Hút sữa → hết giờ → chọn bên → nhắc lần sau → Home shows “Lần trước”\n• Rã đông sữa → Tắt → hạn dùng sữa (chip on Home)\n• Nấu cháo → 3 bước tự chạy nối tiếp\n• Clock button on Home → Lịch sử\n• “Cả nhà cùng thấy” switch on Set screen\nDemo speed: 1 phút mỗi giây (Tweaks).",
+      "w": 420,
+      "x": 1880,
+      "y": 0
+    },
+    "flowTitle": {
+      "kind": "title1",
+      "maxW": 1800,
+      "text": "Mẹ Hẹn Giờ — trong app",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "n10": {
+      "fill": "teal",
+      "text": "2 · Smart next reminder (like Huckleberry SweetSpot): suggests the next time from her own recent gaps. One big Nhắc tôi button; ± moves it 15 min.",
+      "w": 390,
+      "x": 470,
+      "y": 3824
+    },
+    "n11": {
+      "fill": "teal",
+      "text": "1 · History: the top card answers the 3 a.m. question — when did I last pump, which side. Below, today's timers with who started them.",
+      "w": 390,
+      "x": 940,
+      "y": 3824
+    },
+    "n12": {
+      "fill": "teal",
+      "text": "3 · Shared family timers: Bà's phone gets the same Live Activity when Mẹ starts cháo. Anyone can pause; Tắt cho cả nhà stops it on every phone.",
+      "w": 390,
+      "x": 1410,
+      "y": 3824
+    },
+    "n13": {
+      "fill": "teal",
+      "text": "4 · Use-by timer: starts automatically when thawing ends. Limits shown (2 h out, 24 h fridge) are placeholders — confirm against CDC / Bộ Y tế guidance before shipping.",
+      "w": 390,
+      "x": 1880,
+      "y": 3824
+    },
+    "n14": {
+      "fill": "teal",
+      "text": "5 · Step timers for ăn dặm: cháo runs Ngâm → Nấu → Để nguội as one chain; each step rings softly and the next starts. Bước tiếp skips ahead.",
+      "w": 390,
+      "x": 2350,
+      "y": 3824
+    },
+    "n5": {
+      "fill": "orange",
+      "text": "Leaving the app: the running timer becomes a Live Activity. The Dynamic Island shows only the category icon (left) and time left (right) — no words to read.",
+      "w": 390,
+      "x": 0,
+      "y": 2244
+    },
+    "n6": {
+      "fill": "orange",
+      "text": "Long-press the Island: it expands with big round Pause / Stop buttons that work without opening the app (App Intents).",
+      "w": 390,
+      "x": 470,
+      "y": 2244
+    },
+    "n7": {
+      "fill": "orange",
+      "text": "Lock screen: the same Live Activity as a soft card — time left, end time, progress and two round buttons. The system counts down on its own, so nothing breaks if the app is closed.",
+      "w": 390,
+      "x": 940,
+      "y": 2244
+    },
+    "n8": {
+      "fill": "orange",
+      "text": "Time's up: scheduled with AlarmKit (iOS 26+), so it rings full-screen even on Silent or in a Focus. One big Tắt button plus +5 phút; soft sound that rises gently.",
+      "w": 390,
+      "x": 1410,
+      "y": 2244
+    },
+    "n9": {
+      "fill": "teal",
+      "text": "1 · Auto history: when pumping ends, the Done screen asks one tap — Trái / Phải / Cả hai. That tap is the whole log. Skip is always allowed.",
+      "w": 390,
+      "x": 0,
+      "y": 3824
+    },
+    "outTitle": {
+      "kind": "title1",
+      "maxW": 1800,
+      "text": "Khi mẹ rời app — Dynamic Island & màn hình khóa",
+      "w": 240,
+      "x": 0,
+      "y": 1020
+    },
+    "n15": {
+      "fill": "teal",
+      "text": "6 · Language: gear on Home → Cài đặt → Tiếng Việt / English. Switches every screen instantly, including past History entries. Each option is written in its own language so anyone can find theirs.",
+      "w": 860,
+      "x": 2820,
+      "y": 3824
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Set.dc.html",
+    "Run.dc.html",
+    "Done.dc.html",
+    "Island.dc.html",
+    "IslandExpanded.dc.html",
+    "LockScreen.dc.html",
+    "AlarmAlert.dc.html",
+    "PumpSide.dc.html",
+    "NextReminder.dc.html",
+    "History.dc.html",
+    "Family.dc.html",
+    "MilkSafe.dc.html",
+    "CookSteps.dc.html",
+    "Icon3d.dc.html",
+    "TimerStyles.dc.html",
+    "Timer3d.dc.html",
+    "Settings.dc.html",
+    "HomeEn.dc.html"
+  ],
+  "pages": [],
+  "title": "Mom Timer App"
+}

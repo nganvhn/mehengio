@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Nấu cháo theo bước</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+@keyframes tDrop{0%{transform:translateY(0) scale(0.2);opacity:0}10%{opacity:1}35%{transform:translateY(0) scale(1)}51.25%{transform:translateY(6px) scale(1)}67.5%{transform:translateY(24px) scale(1)}83.75%{transform:translateY(54px) scale(1)}100%{transform:translateY(96px) scale(1);opacity:1}}
+@keyframes tRipple{0%{transform:scale(0.3);opacity:0.9}40%{transform:scale(1.7);opacity:0}100%{transform:scale(1.7);opacity:0}}
+@keyframes tSteam{0%{transform:translate(0,8px) scaleY(0.8);opacity:0}25%{opacity:0.85}100%{transform:translate(4px,-30px) scaleY(1.15);opacity:0}}
+@keyframes tBubble{0%{transform:scale(0);opacity:0}55%{transform:scale(1);opacity:1}68%{transform:scale(1.12);opacity:1}72%{transform:scale(1.45);opacity:0}100%{transform:scale(1.45);opacity:0}}
+@keyframes tFlame{0%,100%{transform:scale(1,1)}25%{transform:scale(0.94,1.08)}50%{transform:scale(1.04,0.9)}75%{transform:scale(0.97,1.04)}}
+@keyframes tSlide{0%{transform:translateY(0);opacity:0}15%{transform:translateY(2px);opacity:1}72%{transform:translateY(78px);opacity:1}78%{transform:translateY(80px);opacity:1}100%{transform:translateY(94px);opacity:0}}
+@keyframes tBob{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(2px) rotate(1.5deg)}}
+@keyframes tWave{0%,100%{transform:translateX(0)}50%{transform:translateX(-4px)}}
+@keyframes tGlow{0%,100%{opacity:0.72}50%{opacity:0.82}}
+@keyframes tGrain{0%,100%{transform:translate(0,0)}50%{transform:translate(3px,1px)}}
+@keyframes tSand{0%{stroke-dashoffset:0}100%{stroke-dashoffset:-14}}
+@media (prefers-reduced-motion: reduce){.t-anim{animation:none !important}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Be Vietnam Pro', system-ui, sans-serif; color: #4A3F3A">
+<dc-import name="Main" start-screen="run" start-cat="chao" hint-size="390px,844px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

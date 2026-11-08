@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Dynamic Island mở rộng</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+button:focus-visible{outline:3px solid #F2B8AC;outline-offset:3px}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #CFC2BA; color: #3D3330; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Be Vietnam Pro', system-ui, sans-serif">
+
+<div style="padding: 236px 26px 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 26px; column-gap: 18px; justify-items: center; opacity: 0.55">
+<span style="width: 62px; height: 62px; border-radius: 15px; background: #F5EFEA"></span>
+<span style="width: 62px; height: 62px; border-radius: 15px; background: #F5EFEA"></span>
+<span style="width: 62px; height: 62px; border-radius: 15px; background: #F5EFEA"></span>
+<span style="width: 62px; height: 62px; border-radius: 15px; background: #F5EFEA"></span>
+<span style="width: 62px; height: 62px; border-radius: 15px; background: #F5EFEA"></span>
+<span style="width: 62px; height: 62px; border-radius: 15px; background: #F5EFEA"></span>
+<span style="width: 62px; height: 62px; border-radius: 15px; background: #F5EFEA"></span>
+<span style="width: 62px; height: 62px; border-radius: 15px; background: #F5EFEA"></span>
+</div>
+
+<div style="position: absolute; top: 11px; left: 10px; width: 370px; box-sizing: border-box; padding: 18px 20px 20px; border-radius: 46px; background: #000000; color: #FFFFFF; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: #3A2724; display: flex; align-items: center; justify-content: center">
+<dc-import name="Icon3d" kind="pump" size="42" hint-size="42px,42px"></dc-import>
+</span>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 17px; font-weight: 600">Hút sữa</span>
+<span style="font-size: 14px; color: #BDB3AE">Xong lúc 21:48</span>
+</div>
+<span style="font-size: 40px; font-weight: 600; color: #F2B8AC; font-variant-numeric: tabular-nums; line-height: 1">12:34</span>
+</div>
+<div style="display: flex; align-items: center; gap: 14px">
+<div aria-hidden="true" style="flex: 1; height: 8px; border-radius: 4px; background: #3A3533; overflow: hidden">
+<div style="width: 38%; height: 100%; border-radius: 4px; background: #F2B8AC"></div>
+</div>
+<button aria-label="Tạm dừng" style="width: 52px; height: 52px; border-radius: 50%; border: none; background: #4A2E29; color: #F2B8AC; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1.5"></rect><rect x="14" y="5" width="4" height="14" rx="1.5"></rect></svg>
+</button>
+<button aria-label="Dừng" style="width: 52px; height: 52px; border-radius: 50%; border: none; background: #3A3533; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="3"></rect></svg>
+</button>
+</div>
+</div>
+
+<div aria-hidden="true" style="position: absolute; bottom: 8px; left: 128px; width: 134px; height: 5px; border-radius: 3px; background: #3D3330; opacity: 0.85"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
